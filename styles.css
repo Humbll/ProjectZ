@@ -6,34 +6,20 @@ html, body, h1, h2, p, ul, li {
     padding: 0;
 }
 
-/* Set a background image for the entire page */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('background.jpg'); /* Replace 'background.jpg' with your background image URL */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #333; /* Default text color */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Style the header with a background color and centered text */
 header {
-    background-color: #007BFF; /* Blue background color */
-    color: #fff; /* White text color */
-    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
     padding: 20px;
-}
-
-/* Style the navigation menu */
-nav {
-    background-color: #333; /* Dark background color */
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center; /* Center the navigation links */
 }
 
 nav ul li {
@@ -43,42 +29,51 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #fff; /* White text color for links */
+    color: #fff;
     font-weight: bold;
-    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 nav a:hover {
-    color: #007BFF; /* Blue text color on hover */
+    color: #003f7f; /* Darker blue on hover */
 }
 
-/* Style the main content container */
 .content-container {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 10px;
-    margin: 20px auto; /* Center the container horizontally */
-    max-width: 800px; /* Limit the width of the content container */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style headings */
-h1, h2 {
-    font-weight: bold;
-    color: #007BFF; /* Blue heading color */
-    text-align: center;
+.news-section {
+    margin-bottom: 20px;
 }
 
-/* Style paragraphs */
-p {
-    font-size: 18px;
-    line-height: 1.5;
+.matches-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-/* Style the footer */
+.match {
+    flex: 0 0 calc(50% - 10px); /* Two columns with 10px spacing */
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.match h3 {
+    color: #007BFF;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 footer {
-    background-color: #007BFF; /* Blue background color */
-    color: #fff; /* White text color */
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 10px;
 }
