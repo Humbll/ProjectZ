@@ -20,26 +20,20 @@
         </nav>
     </header>
 
+    <section class="registration-section">
+        <h2>Register an Account</h2>
+        <form action="konton.py" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
 
-    
-    <main>
-        <section class="match-box">
-            <div class="match-details">
-                <h2>Match at 19:00</h2>
-                <p>Two teams, Truman and Donald, are going head-to-head at 19:00.</p>
-            </div>
-            <div class="team-logos">
-                <!-- Placeholder for Team Truman's Logo -->
-                <img src="truman-logo.png" alt="Team Truman Logo" class="team-logo">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
 
-                <!-- Placeholder for Team Donald's Logo -->
-                <img src="donald-logo.png" alt="Team Donald Logo" class="team-logo">
-            </div>
-        </section>
-    </main>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
 
-    <footer>
-        <p>&copy; 2023 Your Project Name</p>
-    </footer>
+            <button type="submit">Register</button>
+        </form>
+    </section>
 </body>
 </html>
