@@ -77,3 +77,24 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+
+.guess-section {
+    text-align: center; /* Center-align the entire section */
+}
+
+.guess-rows {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns per row */
+    justify-content: center; /* Center-align the rows */
+}
+
+.guess-box {
+    background-color: rgb(54, 14, 46);
+    color: rgb(228, 15, 15);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: top;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+

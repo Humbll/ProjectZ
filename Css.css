@@ -40,3 +40,20 @@ footer {
     text-align: center;
     padding: 10px;
 }
+.guess-section {
+    text-align: center; /* Center-align the entire section */
+}
+
+.guess-rows {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping to start a new row */
+    justify-content: space-between;
+}
+
+.guess-row {
+    width: 18%; /* Adjust the width as needed to fit 5 boxes in a row */
+    margin: 5px; /* Add some margin between rows */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align boxes within each row */
+}
