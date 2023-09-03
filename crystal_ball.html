@@ -10,8 +10,8 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Matches</a></li>
+                <li><a href="index.html">News</a></li>
+                <li><a href="matches.html">Matches</a></li>
                 <li><a href="#">Rankings</a></li>
                 <li><a href="#">Forums</a></li>
                 <li><a href="crystal_ball.html">Crystal Ball</a></li>
@@ -27,8 +27,8 @@
             <div class="guess-box">
                 <h3>Number of pentakills</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="pentakills-guess" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value=""></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -37,38 +37,38 @@
                     </select>
                 </div>
             </div>
-            <!-- Repeat for the next guess box -->
-                        <div class="guess-box">
-                <h3>Number of quad:</h3>
-                <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="4">4</option>
-                        <option value="6">6</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-            </div>
-            <div class="guess-box">
-                <h3>Number of baron:</h3>
-                <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="4">4</option>
-                        <option value="6">6</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-            </div>
+
+    <div class="guess-box">
+        <h3>Number of quad:</h3>
+        <div class="input-box">
+            <select id="quad-guess" class="guess-select" onchange="removePlaceholderOption(this)">
+                <option value=""></option> <!-- Add this line for the placeholder -->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+    </div>
+<div class="guess-box">
+    <h3>Number of baron:</h3>
+    <div class="input-box">
+        <select id="baron-guess" class="guess-select" onchange="removePlaceholderOption(this)">
+            <option value=""></option> <!-- Add this line for the placeholder -->
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+</div>
             <div class="guess-box">
                 <h3>Number of jungle:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess1" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -80,8 +80,8 @@
             <div class="guess-box">
                 <h3>Number of unique champions:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess2" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -93,8 +93,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess3" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option><!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -106,8 +106,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess4" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -119,8 +119,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess5" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -132,8 +132,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess6" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -145,8 +145,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess7" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -158,8 +158,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess8" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -171,8 +171,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess9" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -184,8 +184,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess10" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -197,8 +197,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess11" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -210,8 +210,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess12" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -223,8 +223,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess13" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option><!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -236,8 +236,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess14" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option><!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -249,8 +249,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess15" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -262,8 +262,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess16" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option> <!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -275,8 +275,8 @@
             <div class="guess-box">
                 <h3>Number of Wins:</h3>
                 <div class="input-box">
-                    <select id="wins-guess" class="guess-select">
-                        <!-- Options for Number of Wins -->
+                    <select id="wins-guess17" class="guess-select" onchange="removePlaceholderOption(this)">
+                        <option value="15"></option><!-- Add this line for the placeholder -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="4">4</option>
@@ -300,7 +300,7 @@
 
     <script src="script.js"></script>
     <footer>
-        <p>&copy; 2023 Your Project Name</p>
+        <p>&copy; Project escape the matrix</p>
     </footer>
 </body>
 </html>

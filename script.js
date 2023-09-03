@@ -47,10 +47,23 @@ document.addEventListener('DOMContentLoaded', function () {
     submitButton.addEventListener('click', function () {
         if (guessesLocked) {
             resultMessage.textContent = "Guesses submitted.";
-            // You can implement the submission logic here
+            resultMessage.style.color = "green";
         } else {
             resultMessage.textContent = "Please lock all guesses before submitting.";
             resultMessage.style.color = "red";
         }
     });
 });
+
+function removePlaceholderOption(selectElement) {
+    // Get the selected option value
+    const selectedValue = selectElement.value;
+
+    // Find the placeholder option with an empty value
+    const placeholderOption = selectElement.querySelector('option[value=""]');
+
+    // If a valid option is selected (non-empty value), remove the placeholder option
+    if (selectedValue !== "") {
+        placeholderOption.remove();
+    }
+}
