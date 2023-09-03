@@ -4,7 +4,7 @@ import numpy as np
 
 
 # Replace 'YOUR_API_KEY' with your actual API key
-api_key = 'RGAPI-358cedb2-5d4e-4beb-b72e-f6ac8a1270a7'
+api_key = 'RGAPI-80bed39b-409c-4394-a7b9-9962fc2a1631'
 summoner_name = 'emerald forest'
 region = 'euw1'  # Change this to your region if it's different
 

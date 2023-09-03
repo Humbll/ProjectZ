@@ -1,33 +1,56 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function () {
     const submitButton = document.getElementById('submit-guess');
-    const winsSelect = document.getElementById('wins-guess');
-    const goalsInput = document.getElementById('goals-guess');
-    const shotsInput = document.getElementById('shots-guess');
+    const lockAllButton = document.getElementById('lock-all-button');
+    const guessSelects = document.querySelectorAll('.guess-select');
     const resultMessage = document.getElementById('result');
+    let guessesLocked = false;
 
+    // Function to set a value in Local Storage
+    function setLocalStorageItem(key, value) {
+        localStorage.setItem(key, value);
+    }
+
+    // Function to get a value from Local Storage
+    function getLocalStorageItem(key) {
+        return localStorage.getItem(key);
+    }
+
+    // Load and set the last saved guesses from Local Storage
+    guessSelects.forEach(guessSelect => {
+        const guessType = guessSelect.id;
+        const lastGuess = getLocalStorageItem(guessType);
+        if (lastGuess !== null) {
+            guessSelect.value = lastGuess;
+        }
+    });
+
+    // Lock/Unlock all guesses
+    lockAllButton.addEventListener('click', function () {
+        if (!guessesLocked) {
+            guessSelects.forEach(guessSelect => {
+                guessSelect.disabled = true;
+                // Save the current value in Local Storage
+                setLocalStorageItem(guessSelect.id, guessSelect.value);
+            });
+            lockAllButton.textContent = "Unlock All";
+            guessesLocked = true;
+        } else {
+            guessSelects.forEach(guessSelect => {
+                guessSelect.disabled = false;
+            });
+            lockAllButton.textContent = "Lock All";
+            guessesLocked = false;
+        }
+    });
+
+    // Submit guesses
     submitButton.addEventListener('click', function () {
-        const winsGuess = parseInt(winsSelect.value);
-        const goalsGuess = parseInt(goalsInput.value);
-        const shotsGuess = parseInt(shotsInput.value);
-
-        // Send the user's guesses to the Python backend
-        fetch('/guess', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: `winsGuess=${winsGuess}&goalsGuess=${goalsGuess}&shotsGuess=${shotsGuess}`,
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Display the result message from the backend
-            resultMessage.textContent = data.message;
-            resultMessage.style.color = data.color || 'black';
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+        if (guessesLocked) {
+            resultMessage.textContent = "Guesses submitted.";
+            // You can implement the submission logic here
+        } else {
+            resultMessage.textContent = "Please lock all guesses before submitting.";
+            resultMessage.style.color = "red";
+        }
     });
 });
