@@ -14,6 +14,7 @@ headers = {'X-Riot-Token': api_key}
 
 try:
     response = requests.get(summoner_url, headers=headers)
+    
     response.raise_for_status()
     summoner_data = response.json()
     summoner_id = summoner_data['id']
