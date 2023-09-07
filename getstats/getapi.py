@@ -1,7 +1,9 @@
 import requests
+from shortgame import shortgame
+
 
 # Replace 'YOUR_API_KEY' with your actual API key
-api_key = 'RGAPI-80bed39b-409c-4394-a7b9-9962fc2a1631'
+api_key = 'RGAPI-333dd18a-fba2-492b-8fb0-ab20bf3c22ed'
 summoner_name = 'aaddee'
 region = 'euw1'  # Change this to your region if it's different
 
@@ -14,9 +16,9 @@ requests.get(api_url)
 resp = requests.get(api_url)
 player_info = resp.json()
 puuid = player_info['puuid']
-
 # get the PUUID URL
-api_url = "https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/K-UDi0UtqeVFQRI1pEZaROIdCjYk0ObnXiUXmGuG-LDiB16LLc9jddPn7FzDbQwIXDFey-Gt6b40Gw/ids?start=0&count=20"
+api_url = f"https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?start=0&count=20"
+
 api_url = api_url + '&api_key=' + api_key 
 resp = requests.get(api_url)
 
@@ -24,22 +26,12 @@ resp = requests.get(api_url)
 match_ids = resp.json()
 # Check if there are any match IDs
 
-if match_ids:
-    from gamelength import find_longest_shortest_game  # Import the function
 
-    (longest_id, longest_duration, shortest_id, shortest_duration) = find_longest_shortest_game(api_key, match_ids)
+shortest_game_id, shortest_game_duration = shortgame(api_url, summoner_name)
 
-    if longest_id:
-        print(f'Longest Game ID: {longest_id}')
-        print(f'Longest Game Duration: {longest_duration} minutes')
-    else:
-        print(f'No recorded longest games found.')
-
-    if shortest_id:
-        print(f'Shortest Game ID: {shortest_id}')
-        print(f'Shortest Game Duration: {shortest_duration} minutes')
-    else:
-        print(f'No recorded shortest games found.')
-
+if shortest_game_id:
+    print(f'Summoner: {summoner_name}')
+    print(f'Shortest Game ID: {shortest_game_id}')
+    print(f'Shortest Game Duration: {shortest_game_duration} minutes')
 else:
-    print(f'{summoner_name} has no recorded games.')
+    print(f'No recorded shortest games found for {summoner_name}.')
