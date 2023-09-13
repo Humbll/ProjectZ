@@ -3,7 +3,7 @@ from shortgame import shortgame
 
 
 # Replace 'YOUR_API_KEY' with your actual API key
-api_key = 'RGAPI-333dd18a-fba2-492b-8fb0-ab20bf3c22ed'
+api_key = 'RGAPI-6fcd2047-a50f-40ab-a2a1-7c18d2adcad2'
 summoner_name = 'aaddee'
 region = 'euw1'  # Change this to your region if it's different
 
