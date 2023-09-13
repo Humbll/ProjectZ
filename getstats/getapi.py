@@ -27,11 +27,22 @@ match_ids = resp.json()
 # Check if there are any match IDs
 
 
-shortest_game_id, shortest_game_duration = shortgame(api_url, summoner_name)
-
+shortest_game_id, shortest_game_duration = shortgame(api_url, summoner_name, api_key)
 if shortest_game_id:
     print(f'Summoner: {summoner_name}')
     print(f'Shortest Game ID: {shortest_game_id}')
     print(f'Shortest Game Duration: {shortest_game_duration} minutes')
 else:
-    print(f'No recorded shortest games found for {summoner_name}.')
+    print(f'Shortgameclear')
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

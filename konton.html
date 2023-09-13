@@ -2,70 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HLTV-Inspired Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">News</a></li>
-                <li><a href="matches.html">Matches</a></li>
-                <li><a href="#">Rankings</a></li>
-                <li><a href="#">Forums</a></li>
-                <li><a href="crystal_ball.html">Crystal Ball</a></li>
-                <li><a href="konton.html">Create account</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <title>Account Registration</title>
 </head>
 <body>
     <h1>Account Registration</h1>
-    <form id="registration-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" required><br><br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" required><br><br>
-
-        <button type="button" onclick="createAccount()">Register</button>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
     </form>
-
-    <script>
-        // Array to store registered accounts
-        const accounts = [];
-
-        function createAccount() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            // Check if the email is already registered
-            if (accounts.some(account => account.email === email)) {
-                alert('Email is already registered. Please use a different email.');
-                return;
-            }
-
-            // Create an account object and add it to the accounts array
-            const account = {
-                name: name,
-                email: email,
-                password: password
-            };
-            accounts.push(account);
-
-            // Clear the form fields
-            document.getElementById('name').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('password').value = '';
-
-            alert('Account created successfully!');
-        }
-    </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 import requests
 
 # Replace 'YOUR_API_KEY' with your actual API key
-api_key = 'RGAPI-80bed39b-409c-4394-a7b9-9962fc2a1631'
+api_key = 'RGAPI-6fcd2047-a50f-40ab-a2a1-7c18d2adcad2'
 summoner_name = 'aaddee'
 region = 'euw1'  # Change this to your region if it's different
 
@@ -22,6 +22,7 @@ resp = requests.get(api_url)
 
 # Get the latest match data
 match_ids = resp.json()
+
 # Check if there are any match IDs
 if match_ids:
     longest_game_duration = 0
@@ -31,7 +32,7 @@ if match_ids:
         match_url = f'https://europe.api.riotgames.com/lol/match/v5/matches/{match_id}?api_key={api_key}'
         resp = requests.get(match_url)
         match_data = resp.json()
-        
+        print(match_data)
         # Calculate the game duration in minutes
         game_duration = match_data['info']['gameDuration'] / 60
         
