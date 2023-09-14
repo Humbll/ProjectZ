@@ -1,4 +1,18 @@
 import requests
+import pyodbc
+
+
+context = pyodbc.connect(f'DRIVER={{ODBC Driver 18 for SQL Server}};server=localhost\\SQLExpress;database=master;Encrypt=No;Trusted_Connection=Yes',autocommit=True)
+cursor = context.cursor()
+cursor.execute('use test')
+# cursor.execute('create database test')
+cursor.execute('create table users (username VARCHAR(MAX), password VARCHAR(MAX))')
+# cursor.execute('create table shortgames')
+
+
+
+
+
 
 # Replace 'YOUR_API_KEY' with your actual API key
 api_key = 'RGAPI-6fcd2047-a50f-40ab-a2a1-7c18d2adcad2'
