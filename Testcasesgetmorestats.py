@@ -6,8 +6,8 @@ context = pyodbc.connect(f'DRIVER={{ODBC Driver 18 for SQL Server}};server=local
 cursor = context.cursor()
 cursor.execute('use test')
 # cursor.execute('create database test')
-cursor.execute('create table users (username VARCHAR(MAX), password VARCHAR(MAX))')
-# cursor.execute('create table shortgames')
+# cursor.execute('create table users (username VARCHAR(MAX), password VARCHAR(MAX))')
+cursor.execute('create table shortgames')
 
 
 
