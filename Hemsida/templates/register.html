@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
   </head>
   <body>
     <!-- partial:index.partial.html -->
@@ -58,14 +58,15 @@
           </div>
         </form>
       </div>
-      <div id="register" class="col s12">
+      
+      <form class="col s12" action="/register" method="POST">
         <form class="col s12">
           <div class="form-container">
             <h3 class="h3-text">Registera</h3>
             <div class="row">
               <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate" required />
-                <label for="last_name">Namn</label>
+                <input id="name" name="name" type="text" class="validate" required />
+                <label for="name">Namn</label>
               </div>
               <div class="input-field col s6">
                 <input id="last_name" type="text" class="validate" required />
@@ -74,7 +75,7 @@
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" type="email" class="validate" required />
+                <input id="email" name="email" type="email" class="validate" required />
                 <label for="email">Email</label>
               </div>
             </div>
@@ -103,7 +104,7 @@
             <div class="row">
               <div class="input-field col s12">
                 <input
-                  id="password-confirm"
+                  id="password-confirm" name="password"
                   type="password"
                   class="validate"
                   required
