@@ -1,7 +1,7 @@
 import requests
 import pyodbc
 import uuid
-
+import hashlib
 
 
 from flask import Flask, request, render_template, redirect, url_for
@@ -14,9 +14,15 @@ def register():
     # Get registration data from the form
     name = request.form.get('name')
     email = request.form.get('email')
-    password = request.form.get('password')
+    
+    #hash passwords
+    passwordtohash = request.form.get('password')
+    hasher = hashlib.sha256()
+    # Update the hasher with the bytes of the name
+    hasher.update(passwordtohash.encode('utf-8'))
+    # Get the hexadecimal representation of the hash
+    password = hasher.hexdigest()
 
-    # You can add additional logic for database storage or validation here
     
     context = pyodbc.connect(f'DRIVER={{ODBC Driver 18 for SQL Server}};server=localhost\\SQLExpress;database=master;Encrypt=No;Trusted_Connection=Yes',autocommit=True)
     cursor = context.cursor()
