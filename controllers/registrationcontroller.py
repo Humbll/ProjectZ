@@ -2,19 +2,17 @@ import requests
 import pyodbc
 import uuid
 import hashlib
+from flask import Blueprint, request, render_template, redirect, url_for
 
 
-from flask import Flask, request, render_template, redirect, url_for
-
-app = Flask(__name__)
+registerblueprint = Blueprint('register', __name__, template_folder='templates')
 
 
-@app.route('/register', methods=['POST'])
+@registerblueprint.route('/register', methods=['POST'])
 def register():
     # Get registration data from the form
     name = request.form.get('name')
     email = request.form.get('email')
-    
     #hash passwords
     passwordtohash = request.form.get('password')
     hasher = hashlib.sha256()
@@ -47,11 +45,9 @@ def register():
     cursor.execute(sql)
     
     # Redirect back to login.html after registration
-    return redirect(url_for('register_page'))
+    return redirect(url_for('register.register_page'))
 
-@app.route('/register')
+@registerblueprint.route('/register')
 def register_page():
     return render_template('register.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
