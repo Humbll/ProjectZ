@@ -17,7 +17,7 @@ app.register_blueprint(registerblueprint)
 #app.register_blueprint(loginblueprint)
 #app.regsiter_blueprint(savepickems)
 #app.register_blueprint(userjavascriptdata)'
-#
+#app.register_bluepruint(riotfindmostkills)
 #
 #
 #

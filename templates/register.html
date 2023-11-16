@@ -1,133 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Login</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-  </head>
-  <body>
-    <!-- partial:index.partial.html -->
-    <div class="container z-depth-2">
-      <ul class="tabs #BD8634">
-        <li class="tab col s3">
-          <a class="white-text active" href="#login">login</a>
-        </li>
-        <li class="tab col s3">
-          <a class="white-text" href="#register">register</a>
-        </li>
-      </ul>
-      <div id="login" class="col s12">
-        <form class="col s12">
-          <div class="form-container">
-            <h3 class="h3-text">Logga in</h3>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate" required />
-                <label for="email">Email</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input
-                  id="password"
-                  type="password"
-                  class="validate"
-                  required
-                />
-                <label for="password">Lösenord</label>
-              </div>
-            </div>
-            <br />
-            <center>
-              <button
-                class="btn waves-effect waves-light"
-                type="submit"
-                name="action"
-              >
-                Logga in
-              </button>
+{% extends "layout.html" %}
+{% block content %}
+<!-- partial:index.partial.html -->
+<div class="container z-depth-2">
+  <ul class="tabs #BD8634">
+    <li class="tab col s3">
+      <a class="white-text active" href="#login">login</a>
+    </li>
+    <li class="tab col s3">
+      <a class="white-text" href="#register">register</a>
+    </li>
+  </ul>
+  <div id="login" class="col s12">
+    <form class="col s12">
+      <div class="form-container">
+        <h3 class="h3-text">Logga in</h3>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate" required />
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+              id="password"
+              type="password"
+              class="validate"
+              required
+            />
+            <label for="password">Lösenord</label>
+          </div>
+        </div>
+        <br />
+        <center>
+          <button
+            class="btn waves-effect waves-light"
+            type="submit"
+            name="action"
+          >
+            Logga in
+          </button>
 
-              <br />
-              <br />
-              <a href="">Glömt lösenordet?</a>
-            </center>
-          </div>
-        </form>
+          <br />
+          <br />
+          <a href="">Glömt lösenordet?</a>
+        </center>
       </div>
-      
-      <form class="col s12" action="/register" method="POST">
-        <form class="col s12">
-          <div class="form-container">
-            <h3 class="h3-text">Registera</h3>
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="name" name="name" type="text" class="validate" required />
-                <label for="name">Namn</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate" required />
-                <label for="last_name">Efternamn</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" name="email" type="email" class="validate" required />
-                <label for="email">Email</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input
-                  id="email-confirm"
-                  type="email"
-                  class="validate"
-                  required
-                />
-                <label for="email-confirm">Email Bekräftelse</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input
-                  id="password"
-                  type="password"
-                  class="validate"
-                  required
-                />
-                <label for="password">Lösenord</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input
-                  id="password-confirm" name="password"
-                  type="password"
-                  class="validate"
-                  required
-                />
-                <label for="password-confirm">Lösenord Bekräftelse</label>
-              </div>
-            </div>
-            <center>
-              <button
-                class="btn waves-effect waves-light #BD8634"
-                type="submit"
-                name="action"
-              >
-                Registera
-              </button>
-            </center>
+    </form>
+  </div>
+  
+  <form class="col s12" action="/register" method="POST">
+    <form class="col s12">
+      <div class="form-container">
+        <h3 class="h3-text">Registera</h3>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="name" name="name" type="text" class="validate" required />
+            <label for="name">Namn</label>
           </div>
-        </form>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate" required />
+            <label for="last_name">Efternamn</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" name="email" type="email" class="validate" required />
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+              id="email-confirm"
+              type="email"
+              class="validate"
+              required
+            />
+            <label for="email-confirm">Email Bekräftelse</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+              id="password"
+              type="password"
+              class="validate"
+              required
+            />
+            <label for="password">Lösenord</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+              id="password-confirm" name="password"
+              type="password"
+              class="validate"
+              required
+            />
+            <label for="password-confirm">Lösenord Bekräftelse</label>
+          </div>
+        </div>
+        <center>
+          <button
+            class="btn waves-effect waves-light #BD8634"
+            type="submit"
+            name="action"
+          >
+            Registera
+          </button>
+        </center>
       </div>
-    </div>
-    <!-- partial -->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-    <script src="./script.js"></script>
-  </body>
-</html>
+    </form>
+  </div>
+</div>
+
+{% endblock%}
+
