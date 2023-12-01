@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    return redirect(url_for('register.register_page'))
+    return redirect(url_for('kristallkulan.html'))
 
 #   return render_template('index.html)
 

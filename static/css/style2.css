@@ -1,0 +1,172 @@
+
+body {
+  background-color: #0A0E13;
+}
+
+/* Change the background color to #111 */
+.navbar {
+  background-color: #111 !important;
+  height: 75px;
+  z-index: 1000;
+}
+
+/* Change the text color to white */
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+/* Increase the font size of the navbar brand (JoGeek) */
+.navbar-dark .navbar-brand {
+  font-size: 35px; /* You can adjust the font size as needed */
+}
+
+/* Change text color to yellow on hover for navbar links */
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #BD8634;
+}
+
+/* Change the background color of the "Login" button to yellow */
+.btn-primary {
+  background-color: #BD8634 !important;
+  border-color: black !important;
+  color: black !important; /* You can set the text color to black to ensure visibility on yellow */
+}
+
+/* cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.card {
+  flex: 1;
+  background-color: #0F1519;
+  color: whitesmoke;
+  border: 1px solid #252C32;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  /* Set your desired card styles here */
+}
+
+
+
+/* Style for custom dropdown button */
+.custom-dropdown .prediction-button {
+background-color: #BD8634;
+color: #fff;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+}
+
+/* Style for dropdown content */
+.custom-dropdown .dropdown-content {
+display: none;
+position: absolute;
+background-color: #fff;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+z-index: 1;
+left: 50%; /* Center the dropdown horizontally under the button */
+transform: translateX(-50%); /* Center the dropdown horizontally */
+
+}
+
+
+/* Style for dropdown content links */
+.custom-dropdown .dropdown-content a {
+display: flex;
+padding: 12px 16px;
+text-decoration: none;
+color: #333;
+justify-content: center;
+}
+
+/* Hover effect for dropdown content links */
+.custom-dropdown .dropdown-content a:hover {
+background-color: #BD8634;
+color: #fff;
+}
+
+/* Show the dropdown content when button is clicked */
+.custom-dropdown.active .dropdown-content {
+display: flex;
+}
+
+
+.prediction-select {
+padding: 10px;
+width: 200px; /* Adjust the width as needed */
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+color: #333;
+background-color: #fff;
+text-align: center;
+margin: 0 auto; /* Add this line to center the select element horizontally */
+display: block; /* Add this line to make the select element a block-level element */
+}
+
+.button-container {
+display: flex;
+justify-content: center; /* Center the button horizontally */
+align-items: center; /* Center the button vertically */
+}
+
+.custom-submit-button {
+display: flex;
+background-color: #BD8634; /* Pink color */ /* Change this to your desired pink color */
+color: #fff;
+border-width: 0;
+padding: 10px 20px;
+cursor: pointer;
+font-size: 16px;
+border-radius: 5px;
+text-align: center;
+align-items: center;
+justify-content: center;
+width: 50%;
+margin: 10px;
+outline: none;
+transition: background-color 0.3s ease; /* Smooth transition on hover */
+box-shadow: none;
+}
+
+/* Hover effect for the custom submit button */
+.custom-submit-button:hover {
+background-color: #6e5022; /* Darker pink color on hover */ /* Change this to your desired darker pink color */
+outline: none;
+border:0;
+border-width: 0;
+box-shadow: none;
+}
+
+/* Active state for the custom submit button (when pressed) */
+.custom-submit-button:active {
+background-color: #BD8634; /* Pink color */ /* Change this to your desired pink color */
+border:0;
+outline: none;
+border-width: 0;
+box-shadow: none;
+}
+
+#openPopup:focus {
+outline: 0;
+}
+
+/* Media query for two cards per row at 1200px width */
+@media (max-width: 1200px) {
+  .card {
+    flex-basis: calc(50% - 20px); /* 50% width with spacing */
+  }
+}
+
+/* Media query for one card per row at 900px width */
+@media (max-width: 991px) {
+  .card {
+    flex-basis: calc(100% - 20px); /* 100% width with spacing */
+  }
+}
