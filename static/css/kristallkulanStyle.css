@@ -1,0 +1,240 @@
+@import url("https://use.typekit.net/rji7osa.css");
+
+/* Adjust colors as needed */
+body {
+    background-color: #0A0E13;
+    font-family: "colfax-web", sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: #BD8634 #0A0E13;
+}
+
+
+/* Add a custom scrollbar */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Adjust to your desired color */
+body::-webkit-scrollbar-thumb {
+  background-color: #BD8634;
+  border-radius: 6px;
+}
+
+/* Adjust to your desired background color */
+body::-webkit-scrollbar-track {
+  background-color: #0A0E13;
+}
+
+#countdown-container {
+  color: white;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#countdown {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+  /* Change the background color of the "Login" button to yellow */
+  /* You can set the text color to black to ensure visibility on yellow */
+  .btn-primary {
+    background-color: #BD8634 !important;
+    border-color: black !important;
+    color: black !important;
+  }
+
+  .section-container {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 1px solid #252C32;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  /* Adjust as needed */
+  .section-container h2 {
+    color: whitesmoke;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    font-weight: 540;
+  }
+
+  /* Adjust as needed */
+  /* Adjust the gap between cards */
+  /* Center the card container horizontally */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 50px;
+    margin: 0 auto;
+  }
+
+  .card {
+    flex: 1;
+    max-width: 300px;
+    width: 100%;
+    background-color: #0F1519;
+    color: whitesmoke;
+    border: 1px solid #252C32;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+
+
+
+
+/* Style for custom dropdown button */
+.custom-dropdown .prediction-button {
+  background-color: #BD8634;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Style for dropdown content */
+/* Center the dropdown horizontally under the button */
+/* Center the dropdown horizontally */
+.custom-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+
+/* Style for dropdown content links */
+.custom-dropdown .dropdown-content a {
+  display: flex;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  justify-content: center;
+}
+
+/* Hover effect for dropdown content links */
+.custom-dropdown .dropdown-content a:hover {
+  background-color: #BD8634;
+  color: #fff;
+}
+
+/* Show the dropdown content when button is clicked */
+.custom-dropdown.active .dropdown-content {
+  display: flex;
+}
+
+
+/* Adjust the width as needed */
+/* Add this line to center the select element horizontally */
+/* Add this line to make the select element a block-level element */
+.prediction-select {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Center the button horizontally */
+/* Center the button vertically */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pink color */ /* Change this to your desired pink color */
+/* Smooth transition on hover */
+.custom-submit-button {
+  display: flex;
+  background-color: #BD8634;
+  color: #fff;
+  border-width: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 10px;
+  outline: none;
+  transition: background-color 0.3s ease;
+  box-shadow: none;
+}
+
+/* Hover effect for the custom submit button */
+/* Darker pink color on hover */ /* Change this to your desired darker pink color */
+.custom-submit-button:hover {
+  background-color: #6e5022;
+  outline: none;
+  border:0;
+  border-width: 0;
+  box-shadow: none;
+}
+
+/* Active state for the custom submit button (when pressed) */
+/* Pink color */ /* Change this to your desired pink color */
+.custom-submit-button:active {
+  background-color: #BD8634;
+  border:0;
+  outline: none;
+  border-width: 0;
+  box-shadow: none;
+}
+
+#openPopup:focus {
+  outline: 0;
+}
+
+  /* Media query for two cards per row at 1200px width */
+  /* 50% width with spacing */
+  @media (max-width: 1200px) {
+    .card {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+
+  /* Media query for one card per row at 900px width */
+  /* 100% width with spacing */
+  @media (max-width: 991px) {
+    .card {
+      flex-basis: calc(100% - 20px);
+    }
+  }
+
+
+  @media (max-width: 450px) {
+    .section-container {
+      border: 0;
+
+    }
+    /* Adjust as needed */
+    /* Adjust the gap between cards */
+    /* Center the card container horizontally */
+  .card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 5px;
+    margin: 0 auto;
+  }
+  }
