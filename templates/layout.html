@@ -1,3 +1,4 @@
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +9,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"
     />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+
+
+
   </head>
+
+
+
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand" href="#">MOBATV</a>
@@ -49,7 +57,7 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="kristallkulan"
+              href="kristalkullan"
               target="_blank"
               >KRISTALLKULAN</a
             >
@@ -57,7 +65,7 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="policy"
+              href="kontakt"
               target="_blank"
               >KONTAKT</a
             >
@@ -69,7 +77,6 @@
         <a href="register" class="btn btn-primary mr-2">Login</a>
       </div>
     </nav>
-
     {% block content %} 
     {% endblock%}
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -77,3 +84,4 @@
     <script src=".static/js/script.js"></script>
   </body>
 </html>
+{% endblock%}

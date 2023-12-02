@@ -67,3 +67,24 @@ function removePlaceholderOption(selectElement) {
         placeholderOption.remove();
     }
 }
+
+        // Function to toggle the dropdown content
+        function toggleDropdown(button) {
+          var dropdown = button.nextElementSibling;
+          if (dropdown.style.display === "block") {
+              dropdown.style.display = "none";
+          } else {
+              dropdown.style.display = "block";
+          }
+      }
+
+      // Close the dropdown when clicking outside
+      window.addEventListener("click", function(event) {
+          var dropdowns = document.querySelectorAll(".custom-dropdown");
+          for (var i = 0; i < dropdowns.length; i++) {
+              var dropdown = dropdowns[i];
+              if (!dropdown.contains(event.target)) {
+                  dropdown.querySelector(".dropdown-content").style.display = "none";
+              }
+          }
+      });
