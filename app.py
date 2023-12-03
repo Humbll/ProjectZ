@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    return redirect(url_for('kristallkulan.html'))
+    return redirect(url_for('register.register_page'))
 
 #   return render_template('index.html)
 
@@ -39,9 +39,7 @@ def about():
 def kontakt():
     return render_template('kontakt.html')
 
-@app.route('/policy', methods=['GET'])
-def policy():
-    return render_template('policy.html')
+
 
 
 #filer som behövs göras
