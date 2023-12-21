@@ -1,5 +1,7 @@
 from flask import *
 from controllers.registrationcontroller import registerblueprint
+from controllers.riotlogin import riotloginblueprint
+
 
 app = Flask(__name__)
 
@@ -41,10 +43,14 @@ def kontakt():
 
 
 
+@app.route('/riotlogin', methods=['GET'])
+def riotlogin():
+    return render_template('riotlogin')
+
 
 #filer som behövs göras
 app.register_blueprint(registerblueprint)
-#app.register_blueprint(loginblueprint)
+app.register_blueprint(riotloginblueprint)
 #app.regsiter_blueprint(savepickems)
 #app.register_blueprint(userjavascriptdata)'
 #app.register_bluepruint(riotfindmostkills)
