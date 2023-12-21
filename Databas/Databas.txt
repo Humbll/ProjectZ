@@ -1,0 +1,36 @@
+-- Table to store users
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY,
+    Username VARCHAR(255) NOT NULL,
+	Password VARCHAR(255) NOT NULL,
+	Email VARCHAR(255) NOT NULL,
+	DateOfBirth DATE NOT NULL
+    -- Add other user-related fields as needed
+);
+
+-- Table to store predictions
+CREATE TABLE Predictions (
+    PredictionID INT PRIMARY KEY,
+    PredictionText TEXT NOT NULL,
+    -- Add other prediction-related fields as needed
+);
+
+-- Table to store rounds
+CREATE TABLE Rounds (
+    RoundID INT PRIMARY KEY,
+    RoundNumber INT NOT NULL,
+    -- Add other round-related fields as needed
+);
+
+-- Table to store the associations between predictions, users, and rounds
+CREATE TABLE PredictionResults (
+    ResultID INT PRIMARY KEY,
+    UserID INT,
+    PredictionID INT,
+    RoundID INT,
+    ResultValue INT, -- This could be a numerical value representing the outcome of the prediction
+    -- Add other fields as needed
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    FOREIGN KEY (PredictionID) REFERENCES Predictions(PredictionID),
+    FOREIGN KEY (RoundID) REFERENCES Rounds(RoundID)
+);
